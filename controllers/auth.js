@@ -21,8 +21,6 @@ const registerUser = async (req, res) => {
   })
 
   const { error } = schema.validate(req.body.user)
-console.log("error: ",error)
-
 
   if (error) return res.status(400).send(error.details[0].message);
   let user = await User.findOne({ email: req.body.user.email });

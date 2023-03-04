@@ -15,6 +15,14 @@ const userSchema = new Schema({
     required: true,
     unique: true
   },
+  followers: {
+    type: Array,
+    default: []
+  },
+  followings: {
+    type: Array,
+    default: []
+  },
   username: {
     type: String,
     required: true,
@@ -33,7 +41,14 @@ const userSchema = new Schema({
     required: true
   },
   bio: String,
-  college: Array,
+  college: {
+    type: Array,
+    required: true
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false
+  },
   // studyGroups: [{
   //   group: {
   //     type: Schema.Types.ObjectId,
@@ -46,7 +61,9 @@ const userSchema = new Schema({
   //     default: 'user'
   //   }
   // }]
-});
+},
+  { timestamps: true }
+);
 
 const User = mongoose.model('User', userSchema);
 
