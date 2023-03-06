@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const articleRoutes = require('./routes/article.js');
 const authRoutes = require('./routes/auth.js');
+const userProfiles = require('./routes/user-profiles.js')
 const mongoose = require('mongoose');
 var csv = require('csv');
 var fs = require('fs');
@@ -12,9 +13,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/',(req,res) => {
+	res.send("Welcome to QuickStartCollab")
+})
 app.use('/api/articles', articleRoutes)
 app.use("/users", authRoutes);
-// app.use("/user_profiles", authRoutes);
+app.use("/user_profiles", userProfiles)
 app.use("/api/colleges", authRoutes);
 
 const PORT = process.env.PORT || 5000;
@@ -41,12 +45,6 @@ app.post('/api/colleges/total', (req, res) => {
 	};
 
 	res.send(JSON.stringify(str));
-})
-
-app.get('/user_profiles/details', (req, res) => {
-
-
-	res.send("user_profiles/details");
 })
 
 app.post('/api/colleges/search', function (req, res) {
