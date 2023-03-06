@@ -70,6 +70,19 @@ app.post('/api/colleges/search', function (req, res) {
 
 })
 
+app.post('/api/colleges/id', function(req, res) {
+	var id = req.body.headers.collegeId;
+	try {
+		if(colleges[id]) {
+			res.send(JSON.stringify(colleges[id]))
+		} else {
+			res.status(500).send('Something went wrong')
+		}
+	} catch (error) {
+		res.send(error.message)
+	}	
+})
+
 app.post('/api/colleges/state', function (req, res) {
 
 	var state = req.headers.state.toLowerCase();

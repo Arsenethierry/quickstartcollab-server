@@ -1029,6 +1029,13 @@
   "resolved" "https://registry.npmjs.org/csv-parse/-/csv-parse-5.3.5.tgz"
   "version" "5.3.5"
 
+"csv-parser@^3.0.0":
+  "integrity" "sha512-s6OYSXAK3IdKqYO33y09jhypG/bSDHPuyCme/IdEHfWpLf/jKcpitVFyOC6UemgGk8v7Q5u2XE0vvwmanxhGlQ=="
+  "resolved" "https://registry.npmjs.org/csv-parser/-/csv-parser-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "minimist" "^1.2.0"
+
 "csv-stringify@^6.2.4":
   "integrity" "sha512-RVzGaBeHl0IspzOSiNr1e7XDM7ajuESlqetQbxH2pBPplIWycx0gAVclxNEa4lc91brK6LIE0PrdEoHtZYIHIQ=="
   "resolved" "https://registry.npmjs.org/csv-stringify/-/csv-stringify-6.2.4.tgz"
@@ -1488,6 +1495,11 @@
   "version" "3.1.2"
   dependencies:
     "brace-expansion" "^1.1.7"
+
+"minimist@^1.2.0":
+  "integrity" "sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA=="
+  "resolved" "https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz"
+  "version" "1.2.8"
 
 "minipass@^3.0.0":
   "integrity" "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw=="
